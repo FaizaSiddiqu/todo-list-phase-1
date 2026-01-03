@@ -1,16 +1,16 @@
-﻿# Todo Console Application
+# Todo Console Application
 
 A simple yet powerful command-line todo list manager built with Python. Part of the **Hackathon II: Evolution of Todo** project.
 
-## ðŸ“‹ Features
+## Features
 
-- âœ… **Add Task** - Create tasks with title and optional description
-- âœ… **View Tasks** - List all tasks with status indicators
-- âœ… **Update Task** - Modify task title and description
-- âœ… **Delete Task** - Remove tasks permanently
-- âœ… **Mark Complete** - Toggle task completion status
+- **Add Task** - Create tasks with title and optional description
+- **View Tasks** - List all tasks with status indicators
+- **Update Task** - Modify task title and description
+- **Delete Task** - Remove tasks permanently
+- **Mark Complete** - Toggle task completion status
 
-## ðŸš€ Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -21,7 +21,7 @@ A simple yet powerful command-line todo list manager built with Python. Part of 
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/FaizaSiddiqu/todo-list-phase-1.git
    cd todo-console
    ```
 
@@ -41,22 +41,22 @@ A simple yet powerful command-line todo list manager built with Python. Part of 
 uv run python -m src.cli
 ```
 
-## ðŸ“– Usage
+## Usage
 
 When you run the application, you'll see a menu:
 
 ```
 ========================================
-          ðŸ“ TODO LIST MANAGER
+          TODO LIST MANAGER
 ========================================
-ðŸ“Š Total: 0 | âœ“ Done: 0 | â—‹ Pending: 0
+Total: 0 | Done: 0 | Pending: 0
 
-[1] ðŸ“ Add Task
-[2] ðŸ“‹ View Tasks
-[3] âœï¸  Update Task
-[4] ðŸ—‘ï¸  Delete Task
-[5] âœ“  Mark Complete
-[0] ðŸšª Exit
+[1] Add Task
+[2] View Tasks
+[3] Update Task
+[4] Delete Task
+[5] Mark Complete
+[0] Exit
 
 Choose an option:
 ```
@@ -72,18 +72,18 @@ Choose an option:
 Select option `2` to see all tasks:
 
 ```
-â•”â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•—
-â•‘            ðŸ“‹ ALL TASKS              â•‘
-â• â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•£
-â•‘                                      â•‘
-â•‘  â—‹ #1: Buy groceries                 â•‘
-â•‘     Milk, eggs, bread                â•‘
-â•‘     Created: 2026-01-03 10:00        â•‘
-â•‘                                      â•‘
-â•‘  âœ“ #2: Call mom                      â•‘
-â•‘     Created: 2026-01-03 09:00        â•‘
-â•‘                                      â•‘
-â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+======================================
+            ALL TASKS
+======================================
+
+  #1: Buy groceries
+     Milk, eggs, bread
+     Created: 2026-01-03 10:00
+
+  #2: Call mom
+     Created: 2026-01-03 09:00
+
+======================================
 ```
 
 ### Updating a Task
@@ -104,7 +104,7 @@ Select option `2` to see all tasks:
 1. Select option `5`
 2. Enter the task ID to toggle completion
 
-## ðŸ§ª Running Tests
+## Running Tests
 
 ```bash
 # Run all tests
@@ -128,51 +128,42 @@ uv run pytest --cov=src --cov-report=html
 
 Open `htmlcov/index.html` in your browser to view the detailed coverage report.
 
-## ðŸ“ Project Structure
+## Project Structure
 
 ```
 todo-console/
-â”œâ”€â”€ pyproject.toml          # Project configuration
-â”œâ”€â”€ README.md               # This file
-â”œâ”€â”€ .gitignore             # Git ignore rules
-â”œâ”€â”€ src/
-â”‚   â”œâ”€â”€ __init__.py        # Package marker
-â”‚   â”œâ”€â”€ models.py          # Task dataclass
-â”‚   â”œâ”€â”€ storage.py         # In-memory storage
-â”‚   â”œâ”€â”€ operations.py      # Business logic
-â”‚   â””â”€â”€ cli.py             # Command-line interface
-â”œâ”€â”€ tests/
-â”‚   â”œâ”€â”€ __init__.py        # Test package marker
-â”‚   â”œâ”€â”€ conftest.py        # Pytest fixtures
-â”‚   â”œâ”€â”€ test_models.py     # Model tests
-â”‚   â”œâ”€â”€ test_storage.py    # Storage tests
-â”‚   â””â”€â”€ test_operations.py # Operations tests
-â””â”€â”€ specs/
-    â””â”€â”€ 001-console-app/
-        â”œâ”€â”€ spec.md        # Feature specification
-        â”œâ”€â”€ plan.md        # Technical plan
-        â””â”€â”€ tasks.md       # Implementation tasks
+├── pyproject.toml          # Project configuration
+├── README.md               # This file
+├── .gitignore             # Git ignore rules
+├── src/
+│   ├── __init__.py        # Package marker
+│   ├── models.py          # Task dataclass
+│   ├── storage.py         # In-memory storage
+│   ├── operations.py      # Business logic
+│   └── cli.py             # Command-line interface
+├── tests/
+│   ├── __init__.py        # Test package marker
+│   ├── conftest.py        # Pytest fixtures
+│   ├── test_models.py     # Model tests
+│   ├── test_storage.py    # Storage tests
+│   └── test_operations.py # Operations tests
+└── specs/
+    └── 001-console-app/
+        ├── spec.md        # Feature specification
+        ├── plan.md        # Technical plan
+        └── tasks.md       # Implementation tasks
 ```
 
-## ðŸ—ï¸ Architecture
+## Architecture
 
-```
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚              CLI Layer              â”‚
-â”‚   (cli.py - User Interface)         â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚         Operations Layer            â”‚
-â”‚   (operations.py - Business Logic)  â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚          Storage Layer              â”‚
-â”‚   (storage.py - Data Access)        â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚           Model Layer               â”‚
-â”‚   (models.py - Data Structures)     â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-```
+The application follows a layered architecture:
 
-## ðŸ”§ Design Decisions
+- **CLI Layer** (cli.py) - User Interface
+- **Operations Layer** (operations.py) - Business Logic
+- **Storage Layer** (storage.py) - Data Access
+- **Model Layer** (models.py) - Data Structures
+
+## Design Decisions
 
 1. **Dataclasses** - Used for clean, type-safe data structures
 2. **In-Memory Storage** - Simple dict-based storage for Phase 1
@@ -180,14 +171,14 @@ todo-console/
 4. **Type Hints** - Full type annotations throughout
 5. **No External Dependencies** - Only Python standard library for core functionality
 
-## ðŸ“Š Validation Rules
+## Validation Rules
 
 | Field       | Min Length | Max Length | Required |
 |-------------|------------|------------|----------|
 | Title       | 1          | 200        | Yes      |
 | Description | 0          | 1000       | No       |
 
-## ðŸŽ¯ Hackathon Context
+## Hackathon Context
 
 This is **Phase 1** of the Evolution of Todo hackathon:
 
@@ -196,12 +187,10 @@ This is **Phase 1** of the Evolution of Todo hackathon:
 - **Deadline**: December 7, 2025
 - **Goal**: Implement a functional console todo app using spec-driven development
 
-## ðŸ“œ License
+## License
 
 MIT License - Part of PIAIC AI-201 Hackathon II
 
 ---
 
-Built with â¤ï¸ using Python and Spec-Driven Development
-#   t o d o - l i s t - p h a s e - 1 
- 
+Built with Python and Spec-Driven Development
